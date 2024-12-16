@@ -17,7 +17,7 @@
             {
                 res += array[i];
             }
-            return Math.Round(res / array.Length - 1, 3);
+            return Math.Round(res / array.Length, 3);
         }
     }
 }
