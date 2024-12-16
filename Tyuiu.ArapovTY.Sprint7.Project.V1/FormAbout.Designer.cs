@@ -66,7 +66,7 @@
             // 
             // buttonClose_ATY
             // 
-            buttonClose_ATY.BackColor = Color.HotPink;
+            buttonClose_ATY.BackColor = Color.Red;
             buttonClose_ATY.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 204);
             buttonClose_ATY.Location = new Point(545, 431);
             buttonClose_ATY.Margin = new Padding(3, 4, 3, 4);
@@ -106,7 +106,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Gainsboro;
+            BackColor = Color.Bisque;
             ClientSize = new Size(791, 516);
             Controls.Add(groupBoxProgram_ATY);
             Controls.Add(buttonClose_ATY);
