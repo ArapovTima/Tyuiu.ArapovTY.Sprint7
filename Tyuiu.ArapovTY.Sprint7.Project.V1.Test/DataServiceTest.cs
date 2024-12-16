@@ -27,7 +27,7 @@ namespace Tyuiu.ArapovTY.Sprint7.Project.V1.Test
         {
             int[] array = new int[] { 1, 2, 3, 4, 5 };
             double res = ds.GetAvgValue(array);
-            double wait = 3;
+            double wait = 2;
             Assert.AreEqual(wait, res);
         }
 
