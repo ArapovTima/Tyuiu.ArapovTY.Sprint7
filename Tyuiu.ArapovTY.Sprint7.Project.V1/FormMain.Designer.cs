@@ -94,7 +94,6 @@
             buttonOpenFile_ATY.TabIndex = 2;
             toolTipProject_ATY.SetToolTip(buttonOpenFile_ATY, "Выберите нужный файл для загрузки");
             buttonOpenFile_ATY.UseVisualStyleBackColor = true;
-            buttonOpenFile_ATY.Click += buttonOpenFile_ATY_Click;
             buttonOpenFile_ATY.MouseEnter += buttonOpenFile_ATY_MouseEnter;
             // 
             // buttonSaveFile_ATY

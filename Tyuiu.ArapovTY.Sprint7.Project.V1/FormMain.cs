@@ -114,25 +114,5 @@ namespace Tyuiu.ArapovTY.Sprint7.Project.V1
             }
             return mtrx;
         }
-
-        private void buttonOpenFile_ATY_Click(object sender, EventArgs e)
-        {
-            openFileDialogProject_ATY.ShowDialog();
-            openFilepath = openFileDialogProject_ATY.FileName;
-            rows = 10;
-            columns = 10;
-            string[,] res = Array(openFilepath);
-            dataGridViewResultMaster_ATY.ColumnCount = columns;
-            dataGridViewResultMaster_ATY.RowCount = rows;
-            for (int i = 0; i < rows; i++)
-            {
-                dataGridViewResultMaster_ATY.Columns[i].Width = 50;
-                for (int j = 0;j < columns; j++)
-                {
-                    dataGridViewResultMaster_ATY.Rows[1].Cells[j].Value = res[i, j];
-                    dataGridViewResultMaster_ATY.Columns[j].Width = 50;
-                }
-            }
-        }
     }
 }
