@@ -44,6 +44,16 @@ namespace Tyuiu.ArapovTY.Sprint7.Project.V1
         private void buttonHelp_ATY_MouseEnter(object sender, EventArgs e)
         {
             toolTipProject_ATY.ToolTipTitle = "Справка";
-        } 
+        }
+
+        private void buttonOpenFile_ATY_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipProject_ATY.ToolTipTitle = "Открыть файл";
+        }
+
+        private void buttonSaveFile_ATY_Click(object sender, EventArgs e)
+        {
+            toolTipProject_ATY.ToolTipTitle = "Сохранить в файл";
+        }
     }
 }
