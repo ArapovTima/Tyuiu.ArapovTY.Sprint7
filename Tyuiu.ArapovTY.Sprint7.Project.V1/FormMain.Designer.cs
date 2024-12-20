@@ -44,9 +44,17 @@
             labelZakazID_ATY = new Label();
             labelInfoMaster_ATY = new Label();
             groupBoxInfoMaster_ATY = new GroupBox();
+            radioButtonMaster7_ATY = new RadioButton();
+            radioButtonMaster6_ATY = new RadioButton();
+            radioButtonMaster5_ATY = new RadioButton();
+            radioButtonMaster4_ATY = new RadioButton();
+            radioButtonMaster3_ATY = new RadioButton();
+            radioButtonMaster2_ATY = new RadioButton();
+            radioButtonMaster1_ATY = new RadioButton();
             dataGridViewResultInfo_ATY = new DataGridView();
             dataGridViewResultMaster_ATY = new DataGridView();
             labelInfoMasterskaya_ATY = new Label();
+            buttonCheckInfoMaster_ATY = new Button();
             panelName_ATY.SuspendLayout();
             groupBoxDataEntry_ATY.SuspendLayout();
             groupBoxInfoMaster_ATY.SuspendLayout();
@@ -157,19 +165,104 @@
             labelInfoMaster_ATY.AutoSize = true;
             labelInfoMaster_ATY.Location = new Point(6, 25);
             labelInfoMaster_ATY.Name = "labelInfoMaster_ATY";
-            labelInfoMaster_ATY.Size = new Size(808, 60);
+            labelInfoMaster_ATY.Size = new Size(493, 40);
             labelInfoMaster_ATY.TabIndex = 2;
-            labelInfoMaster_ATY.Text = "Загрузите файл, если хотите записаться к какому-либо мастеру.\r\nТак вы сможете подробно изучить информацию о каждом из мастеров и выбрать подходящий для себя вариант.\r\n\r\n";
+            labelInfoMaster_ATY.Text = "Выберите ФИО мастера, информацию о котором хотите посмотреть:\r\n\r\n";
             // 
             // groupBoxInfoMaster_ATY
             // 
+            groupBoxInfoMaster_ATY.Controls.Add(buttonCheckInfoMaster_ATY);
+            groupBoxInfoMaster_ATY.Controls.Add(radioButtonMaster7_ATY);
+            groupBoxInfoMaster_ATY.Controls.Add(radioButtonMaster6_ATY);
+            groupBoxInfoMaster_ATY.Controls.Add(radioButtonMaster5_ATY);
+            groupBoxInfoMaster_ATY.Controls.Add(radioButtonMaster4_ATY);
+            groupBoxInfoMaster_ATY.Controls.Add(radioButtonMaster3_ATY);
+            groupBoxInfoMaster_ATY.Controls.Add(radioButtonMaster2_ATY);
+            groupBoxInfoMaster_ATY.Controls.Add(radioButtonMaster1_ATY);
             groupBoxInfoMaster_ATY.Controls.Add(labelInfoMaster_ATY);
             groupBoxInfoMaster_ATY.Location = new Point(378, 125);
             groupBoxInfoMaster_ATY.Name = "groupBoxInfoMaster_ATY";
-            groupBoxInfoMaster_ATY.Size = new Size(1015, 100);
+            groupBoxInfoMaster_ATY.Size = new Size(1015, 117);
             groupBoxInfoMaster_ATY.TabIndex = 5;
             groupBoxInfoMaster_ATY.TabStop = false;
             groupBoxInfoMaster_ATY.Text = "Мастера";
+            // 
+            // radioButtonMaster7_ATY
+            // 
+            radioButtonMaster7_ATY.AutoSize = true;
+            radioButtonMaster7_ATY.Location = new Point(581, 74);
+            radioButtonMaster7_ATY.Name = "radioButtonMaster7_ATY";
+            radioButtonMaster7_ATY.Size = new Size(108, 24);
+            radioButtonMaster7_ATY.TabIndex = 9;
+            radioButtonMaster7_ATY.TabStop = true;
+            radioButtonMaster7_ATY.Text = "Волков Д.Н";
+            radioButtonMaster7_ATY.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonMaster6_ATY
+            // 
+            radioButtonMaster6_ATY.AutoSize = true;
+            radioButtonMaster6_ATY.Location = new Point(382, 73);
+            radioButtonMaster6_ATY.Name = "radioButtonMaster6_ATY";
+            radioButtonMaster6_ATY.Size = new Size(129, 24);
+            radioButtonMaster6_ATY.TabIndex = 8;
+            radioButtonMaster6_ATY.TabStop = true;
+            radioButtonMaster6_ATY.Text = "Григорьев К.А";
+            radioButtonMaster6_ATY.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonMaster5_ATY
+            // 
+            radioButtonMaster5_ATY.AutoSize = true;
+            radioButtonMaster5_ATY.Location = new Point(197, 75);
+            radioButtonMaster5_ATY.Name = "radioButtonMaster5_ATY";
+            radioButtonMaster5_ATY.Size = new Size(121, 24);
+            radioButtonMaster5_ATY.TabIndex = 7;
+            radioButtonMaster5_ATY.TabStop = true;
+            radioButtonMaster5_ATY.Text = "Кузнецов В.С";
+            radioButtonMaster5_ATY.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonMaster4_ATY
+            // 
+            radioButtonMaster4_ATY.AutoSize = true;
+            radioButtonMaster4_ATY.Location = new Point(18, 74);
+            radioButtonMaster4_ATY.Name = "radioButtonMaster4_ATY";
+            radioButtonMaster4_ATY.Size = new Size(131, 24);
+            radioButtonMaster4_ATY.TabIndex = 6;
+            radioButtonMaster4_ATY.TabStop = true;
+            radioButtonMaster4_ATY.Text = "Воробьёв А.Ю";
+            radioButtonMaster4_ATY.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonMaster3_ATY
+            // 
+            radioButtonMaster3_ATY.AutoSize = true;
+            radioButtonMaster3_ATY.Location = new Point(892, 23);
+            radioButtonMaster3_ATY.Name = "radioButtonMaster3_ATY";
+            radioButtonMaster3_ATY.Size = new Size(116, 24);
+            radioButtonMaster3_ATY.TabIndex = 5;
+            radioButtonMaster3_ATY.TabStop = true;
+            radioButtonMaster3_ATY.Text = "Соколов А.А";
+            radioButtonMaster3_ATY.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonMaster2_ATY
+            // 
+            radioButtonMaster2_ATY.AutoSize = true;
+            radioButtonMaster2_ATY.Location = new Point(711, 23);
+            radioButtonMaster2_ATY.Name = "radioButtonMaster2_ATY";
+            radioButtonMaster2_ATY.Size = new Size(107, 24);
+            radioButtonMaster2_ATY.TabIndex = 4;
+            radioButtonMaster2_ATY.TabStop = true;
+            radioButtonMaster2_ATY.Text = "Петров А.В";
+            radioButtonMaster2_ATY.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonMaster1_ATY
+            // 
+            radioButtonMaster1_ATY.AutoSize = true;
+            radioButtonMaster1_ATY.Location = new Point(523, 23);
+            radioButtonMaster1_ATY.Name = "radioButtonMaster1_ATY";
+            radioButtonMaster1_ATY.Size = new Size(112, 24);
+            radioButtonMaster1_ATY.TabIndex = 3;
+            radioButtonMaster1_ATY.TabStop = true;
+            radioButtonMaster1_ATY.Text = "Иванов С.М";
+            radioButtonMaster1_ATY.UseVisualStyleBackColor = true;
             // 
             // dataGridViewResultInfo_ATY
             // 
@@ -186,11 +279,11 @@
             // 
             dataGridViewResultMaster_ATY.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewResultMaster_ATY.ColumnHeadersVisible = false;
-            dataGridViewResultMaster_ATY.Location = new Point(378, 231);
+            dataGridViewResultMaster_ATY.Location = new Point(378, 248);
             dataGridViewResultMaster_ATY.Name = "dataGridViewResultMaster_ATY";
             dataGridViewResultMaster_ATY.RowHeadersVisible = false;
             dataGridViewResultMaster_ATY.RowHeadersWidth = 51;
-            dataGridViewResultMaster_ATY.Size = new Size(1015, 326);
+            dataGridViewResultMaster_ATY.Size = new Size(1015, 309);
             dataGridViewResultMaster_ATY.TabIndex = 7;
             // 
             // labelInfoMasterskaya_ATY
@@ -203,6 +296,17 @@
             labelInfoMasterskaya_ATY.Size = new Size(704, 50);
             labelInfoMasterskaya_ATY.TabIndex = 8;
             labelInfoMasterskaya_ATY.Text = "Наша мастерская находится по адресу: г.Тюмень, ул.Ленина, д.33\r\nЧасы приёма: 8:00-20:00";
+            // 
+            // buttonCheckInfoMaster_ATY
+            // 
+            buttonCheckInfoMaster_ATY.BackColor = Color.LightGreen;
+            buttonCheckInfoMaster_ATY.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            buttonCheckInfoMaster_ATY.Location = new Point(729, 53);
+            buttonCheckInfoMaster_ATY.Name = "buttonCheckInfoMaster_ATY";
+            buttonCheckInfoMaster_ATY.Size = new Size(279, 55);
+            buttonCheckInfoMaster_ATY.TabIndex = 10;
+            buttonCheckInfoMaster_ATY.Text = "Посмотреть информацию";
+            buttonCheckInfoMaster_ATY.UseVisualStyleBackColor = false;
             // 
             // FormMainLoad_ATY
             // 
@@ -251,5 +355,13 @@
         private DataGridView dataGridViewResultInfo_ATY;
         private DataGridView dataGridViewResultMaster_ATY;
         private Label labelInfoMasterskaya_ATY;
+        private RadioButton radioButtonMaster7_ATY;
+        private RadioButton radioButtonMaster6_ATY;
+        private RadioButton radioButtonMaster5_ATY;
+        private RadioButton radioButtonMaster4_ATY;
+        private RadioButton radioButtonMaster3_ATY;
+        private RadioButton radioButtonMaster2_ATY;
+        private RadioButton radioButtonMaster1_ATY;
+        private Button buttonCheckInfoMaster_ATY;
     }
 }
