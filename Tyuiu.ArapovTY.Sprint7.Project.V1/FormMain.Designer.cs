@@ -30,6 +30,9 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainLoad_ATY));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             panelName_ATY = new Panel();
             labelName_ATY = new Label();
             buttonHelp_ATY = new Button();
@@ -44,6 +47,7 @@
             labelZakazID_ATY = new Label();
             labelInfoMaster_ATY = new Label();
             groupBoxInfoMaster_ATY = new GroupBox();
+            buttonCheckInfoMaster_ATY = new Button();
             radioButtonMaster7_ATY = new RadioButton();
             radioButtonMaster6_ATY = new RadioButton();
             radioButtonMaster5_ATY = new RadioButton();
@@ -54,17 +58,18 @@
             dataGridViewResultInfo_ATY = new DataGridView();
             dataGridViewResultMaster_ATY = new DataGridView();
             labelInfoMasterskaya_ATY = new Label();
-            buttonCheckInfoMaster_ATY = new Button();
+            chartGraf_ATY = new System.Windows.Forms.DataVisualization.Charting.Chart();
             panelName_ATY.SuspendLayout();
             groupBoxDataEntry_ATY.SuspendLayout();
             groupBoxInfoMaster_ATY.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewResultInfo_ATY).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewResultMaster_ATY).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)chartGraf_ATY).BeginInit();
             SuspendLayout();
             // 
             // panelName_ATY
             // 
-            panelName_ATY.BackColor = SystemColors.Control;
+            panelName_ATY.BackColor = Color.CornflowerBlue;
             panelName_ATY.Controls.Add(labelName_ATY);
             panelName_ATY.Location = new Point(5, 5);
             panelName_ATY.Name = "panelName_ATY";
@@ -74,6 +79,7 @@
             // labelName_ATY
             // 
             labelName_ATY.AutoSize = true;
+            labelName_ATY.BackColor = Color.CornflowerBlue;
             labelName_ATY.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 204);
             labelName_ATY.Location = new Point(7, 15);
             labelName_ATY.Name = "labelName_ATY";
@@ -187,6 +193,17 @@
             groupBoxInfoMaster_ATY.TabStop = false;
             groupBoxInfoMaster_ATY.Text = "Мастера";
             // 
+            // buttonCheckInfoMaster_ATY
+            // 
+            buttonCheckInfoMaster_ATY.BackColor = Color.LightGreen;
+            buttonCheckInfoMaster_ATY.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            buttonCheckInfoMaster_ATY.Location = new Point(729, 53);
+            buttonCheckInfoMaster_ATY.Name = "buttonCheckInfoMaster_ATY";
+            buttonCheckInfoMaster_ATY.Size = new Size(279, 55);
+            buttonCheckInfoMaster_ATY.TabIndex = 10;
+            buttonCheckInfoMaster_ATY.Text = "Посмотреть информацию";
+            buttonCheckInfoMaster_ATY.UseVisualStyleBackColor = false;
+            // 
             // radioButtonMaster7_ATY
             // 
             radioButtonMaster7_ATY.AutoSize = true;
@@ -283,13 +300,13 @@
             dataGridViewResultMaster_ATY.Name = "dataGridViewResultMaster_ATY";
             dataGridViewResultMaster_ATY.RowHeadersVisible = false;
             dataGridViewResultMaster_ATY.RowHeadersWidth = 51;
-            dataGridViewResultMaster_ATY.Size = new Size(1015, 309);
+            dataGridViewResultMaster_ATY.Size = new Size(635, 309);
             dataGridViewResultMaster_ATY.TabIndex = 7;
             // 
             // labelInfoMasterskaya_ATY
             // 
             labelInfoMasterskaya_ATY.AutoSize = true;
-            labelInfoMasterskaya_ATY.BackColor = SystemColors.Control;
+            labelInfoMasterskaya_ATY.BackColor = Color.CornflowerBlue;
             labelInfoMasterskaya_ATY.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 204);
             labelInfoMasterskaya_ATY.Location = new Point(5, 79);
             labelInfoMasterskaya_ATY.Name = "labelInfoMasterskaya_ATY";
@@ -297,22 +314,31 @@
             labelInfoMasterskaya_ATY.TabIndex = 8;
             labelInfoMasterskaya_ATY.Text = "Наша мастерская находится по адресу: г.Тюмень, ул.Ленина, д.33\r\nЧасы приёма: 8:00-20:00";
             // 
-            // buttonCheckInfoMaster_ATY
+            // chartGraf_ATY
             // 
-            buttonCheckInfoMaster_ATY.BackColor = Color.LightGreen;
-            buttonCheckInfoMaster_ATY.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            buttonCheckInfoMaster_ATY.Location = new Point(729, 53);
-            buttonCheckInfoMaster_ATY.Name = "buttonCheckInfoMaster_ATY";
-            buttonCheckInfoMaster_ATY.Size = new Size(279, 55);
-            buttonCheckInfoMaster_ATY.TabIndex = 10;
-            buttonCheckInfoMaster_ATY.Text = "Посмотреть информацию";
-            buttonCheckInfoMaster_ATY.UseVisualStyleBackColor = false;
+            chartGraf_ATY.BackColor = SystemColors.Highlight;
+            chartGraf_ATY.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalRight;
+            chartArea1.Name = "ChartArea1";
+            chartGraf_ATY.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            chartGraf_ATY.Legends.Add(legend1);
+            chartGraf_ATY.Location = new Point(1010, 248);
+            chartGraf_ATY.Name = "chartGraf_ATY";
+            chartGraf_ATY.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Люди";
+            chartGraf_ATY.Series.Add(series1);
+            chartGraf_ATY.Size = new Size(383, 309);
+            chartGraf_ATY.TabIndex = 9;
             // 
             // FormMainLoad_ATY
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1405, 709);
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(1405, 581);
+            Controls.Add(chartGraf_ATY);
             Controls.Add(labelInfoMasterskaya_ATY);
             Controls.Add(dataGridViewResultMaster_ATY);
             Controls.Add(dataGridViewResultInfo_ATY);
@@ -332,6 +358,7 @@
             groupBoxInfoMaster_ATY.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewResultInfo_ATY).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewResultMaster_ATY).EndInit();
+            ((System.ComponentModel.ISupportInitialize)chartGraf_ATY).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -363,5 +390,6 @@
         private RadioButton radioButtonMaster2_ATY;
         private RadioButton radioButtonMaster1_ATY;
         private Button buttonCheckInfoMaster_ATY;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartGraf_ATY;
     }
 }
