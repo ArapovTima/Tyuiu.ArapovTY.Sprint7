@@ -51,7 +51,7 @@ namespace Tyuiu.ArapovTY.Sprint7.Project.V1
                 dataGridViewResultInfo_ATY.Rows.Clear();
                 string[,] res = Array(path);
                 dataGridViewResultInfo_ATY.ColumnCount = columns;
-                dataGridViewResultInfo_ATY.RowCount = ID + 1;
+                dataGridViewResultInfo_ATY.RowCount = ID+1;
                 if (ID < rows)
                 {
                     for (int i = 0; i < rows; i++)
@@ -145,34 +145,34 @@ namespace Tyuiu.ArapovTY.Sprint7.Project.V1
                     for (int i = 0; i < rows; i++)
                     {
                         string[] values = lines[i].Split(';');
-                            if (radioButtonMaster1_ATY.Checked)
-                            {
-                                textBoxResultMasters_ATY.Text = values[0];
-                            }
-                            else if (radioButtonMaster2_ATY.Checked)
-                            {
-                                textBoxResultMasters_ATY.Text = values[1];
-                            }
-                            else if (radioButtonMaster3_ATY.Checked)
-                            {
-                                textBoxResultMasters_ATY.Text = values[2];
-                            }
-                            else if (radioButtonMaster4_ATY.Checked)
-                            {
-                                textBoxResultMasters_ATY.Text = values[3];
-                            }
-                            else if (radioButtonMaster5_ATY.Checked)
-                            {
-                                textBoxResultMasters_ATY.Text = values[4];
-                            }
-                            else if (radioButtonMaster6_ATY.Checked)
-                            {
-                                textBoxResultMasters_ATY.Text = values[5];
-                            }
-                            else if (radioButtonMaster7_ATY.Checked)
-                            {
-                                textBoxResultMasters_ATY.Text = values[6];
-                            }
+                        if (radioButtonMaster1_ATY.Checked)
+                        {
+                            textBoxResultMasters_ATY.Text = values[0];
+                        }
+                        else if (radioButtonMaster2_ATY.Checked)
+                        {
+                            textBoxResultMasters_ATY.Text = values[1];
+                        }
+                        else if (radioButtonMaster3_ATY.Checked)
+                        {
+                            textBoxResultMasters_ATY.Text = values[2];
+                        }
+                        else if (radioButtonMaster4_ATY.Checked)
+                        {
+                            textBoxResultMasters_ATY.Text = values[3];
+                        }
+                        else if (radioButtonMaster5_ATY.Checked)
+                        {
+                            textBoxResultMasters_ATY.Text = values[4];
+                        }
+                        else if (radioButtonMaster6_ATY.Checked)
+                        {
+                            textBoxResultMasters_ATY.Text = values[5];
+                        }
+                        else if (radioButtonMaster7_ATY.Checked)
+                        {
+                            textBoxResultMasters_ATY.Text = values[6];
+                        }
                     }
                 }
             }

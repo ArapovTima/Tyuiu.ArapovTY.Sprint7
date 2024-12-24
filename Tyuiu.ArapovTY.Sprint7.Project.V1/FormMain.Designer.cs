@@ -291,7 +291,7 @@
             dataGridViewResultInfo_ATY.Name = "dataGridViewResultInfo_ATY";
             dataGridViewResultInfo_ATY.RowHeadersVisible = false;
             dataGridViewResultInfo_ATY.RowHeadersWidth = 51;
-            dataGridViewResultInfo_ATY.Size = new Size(361, 309);
+            dataGridViewResultInfo_ATY.Size = new Size(187, 74);
             dataGridViewResultInfo_ATY.TabIndex = 6;
             // 
             // labelInfoMasterskaya_ATY
