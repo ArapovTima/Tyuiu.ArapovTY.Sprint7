@@ -1,7 +1,9 @@
 using System.IO;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using Tyuiu.ArapovTY.Sprint7.Project.V1.Lib;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using static System.Windows.Forms.DataFormats;
 namespace Tyuiu.ArapovTY.Sprint7.Project.V1
 {
     public partial class FormMainLoad_ATY : Form
@@ -113,6 +115,71 @@ namespace Tyuiu.ArapovTY.Sprint7.Project.V1
                 }
             }
             return mtrx;
+        }
+
+        private void buttonGraf_ATY_Click(object sender, EventArgs e)
+        {
+            this.chartGraf_ATY.Series["Люди"].Points.AddXY("Пн", 10);
+            this.chartGraf_ATY.Series["Люди"].Points.AddXY("Вт", 15);
+            this.chartGraf_ATY.Series["Люди"].Points.AddXY("Ср", 8);
+            this.chartGraf_ATY.Series["Люди"].Points.AddXY("Чт", 9);
+            this.chartGraf_ATY.Series["Люди"].Points.AddXY("Пт", 19);
+            this.chartGraf_ATY.Series["Люди"].Points.AddXY("Сб", 20);
+            this.chartGraf_ATY.Series["Люди"].Points.AddXY("Вс", 30);
+        }
+
+        private void buttonCheckInfoMaster_ATY_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string path = @"C:\Users\user\source\repos\Tyuiu.ArapovTY.Sprint7\Tyuiu.ArapovTY.Sprint7.Project.V1\Мастера.csv";
+                if (File.Exists(path))
+                {
+                    string fileData = File.ReadAllText(path);
+                    fileData = fileData.Replace('\n', '\r');
+                    string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
+
+                    int rows = lines.Length;
+                    int columns = lines[0].Split(';').Length;
+
+                    for (int i = 0; i < rows; i++)
+                    {
+                        string[] values = lines[i].Split(';');
+                            if (radioButtonMaster1_ATY.Checked)
+                            {
+                                textBoxResultMasters_ATY.Text = values[0];
+                            }
+                            else if (radioButtonMaster2_ATY.Checked)
+                            {
+                                textBoxResultMasters_ATY.Text = values[1];
+                            }
+                            else if (radioButtonMaster3_ATY.Checked)
+                            {
+                                textBoxResultMasters_ATY.Text = values[2];
+                            }
+                            else if (radioButtonMaster4_ATY.Checked)
+                            {
+                                textBoxResultMasters_ATY.Text = values[3];
+                            }
+                            else if (radioButtonMaster5_ATY.Checked)
+                            {
+                                textBoxResultMasters_ATY.Text = values[4];
+                            }
+                            else if (radioButtonMaster6_ATY.Checked)
+                            {
+                                textBoxResultMasters_ATY.Text = values[5];
+                            }
+                            else if (radioButtonMaster7_ATY.Checked)
+                            {
+                                textBoxResultMasters_ATY.Text = values[6];
+                            }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

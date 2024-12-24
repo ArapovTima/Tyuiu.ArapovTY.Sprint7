@@ -56,14 +56,14 @@
             radioButtonMaster2_ATY = new RadioButton();
             radioButtonMaster1_ATY = new RadioButton();
             dataGridViewResultInfo_ATY = new DataGridView();
-            dataGridViewResultMaster_ATY = new DataGridView();
             labelInfoMasterskaya_ATY = new Label();
             chartGraf_ATY = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            buttonGraf_ATY = new Button();
+            textBoxResultMasters_ATY = new TextBox();
             panelName_ATY.SuspendLayout();
             groupBoxDataEntry_ATY.SuspendLayout();
             groupBoxInfoMaster_ATY.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewResultInfo_ATY).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewResultMaster_ATY).BeginInit();
             ((System.ComponentModel.ISupportInitialize)chartGraf_ATY).BeginInit();
             SuspendLayout();
             // 
@@ -203,6 +203,7 @@
             buttonCheckInfoMaster_ATY.TabIndex = 10;
             buttonCheckInfoMaster_ATY.Text = "Посмотреть информацию";
             buttonCheckInfoMaster_ATY.UseVisualStyleBackColor = false;
+            buttonCheckInfoMaster_ATY.Click += buttonCheckInfoMaster_ATY_Click;
             // 
             // radioButtonMaster7_ATY
             // 
@@ -283,6 +284,7 @@
             // 
             // dataGridViewResultInfo_ATY
             // 
+            dataGridViewResultInfo_ATY.BackgroundColor = SystemColors.ActiveCaption;
             dataGridViewResultInfo_ATY.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewResultInfo_ATY.ColumnHeadersVisible = false;
             dataGridViewResultInfo_ATY.Location = new Point(11, 248);
@@ -291,17 +293,6 @@
             dataGridViewResultInfo_ATY.RowHeadersWidth = 51;
             dataGridViewResultInfo_ATY.Size = new Size(361, 309);
             dataGridViewResultInfo_ATY.TabIndex = 6;
-            // 
-            // dataGridViewResultMaster_ATY
-            // 
-            dataGridViewResultMaster_ATY.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewResultMaster_ATY.ColumnHeadersVisible = false;
-            dataGridViewResultMaster_ATY.Location = new Point(378, 248);
-            dataGridViewResultMaster_ATY.Name = "dataGridViewResultMaster_ATY";
-            dataGridViewResultMaster_ATY.RowHeadersVisible = false;
-            dataGridViewResultMaster_ATY.RowHeadersWidth = 51;
-            dataGridViewResultMaster_ATY.Size = new Size(635, 309);
-            dataGridViewResultMaster_ATY.TabIndex = 7;
             // 
             // labelInfoMasterskaya_ATY
             // 
@@ -322,15 +313,36 @@
             chartGraf_ATY.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             chartGraf_ATY.Legends.Add(legend1);
-            chartGraf_ATY.Location = new Point(1010, 248);
+            chartGraf_ATY.Location = new Point(1019, 248);
             chartGraf_ATY.Name = "chartGraf_ATY";
             chartGraf_ATY.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Люди";
             chartGraf_ATY.Series.Add(series1);
-            chartGraf_ATY.Size = new Size(383, 309);
+            chartGraf_ATY.Size = new Size(374, 242);
             chartGraf_ATY.TabIndex = 9;
+            // 
+            // buttonGraf_ATY
+            // 
+            buttonGraf_ATY.BackColor = Color.LightGreen;
+            buttonGraf_ATY.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            buttonGraf_ATY.Location = new Point(1019, 496);
+            buttonGraf_ATY.Name = "buttonGraf_ATY";
+            buttonGraf_ATY.Size = new Size(374, 61);
+            buttonGraf_ATY.TabIndex = 10;
+            buttonGraf_ATY.Text = "Показать график посещаемости";
+            buttonGraf_ATY.UseVisualStyleBackColor = false;
+            buttonGraf_ATY.Click += buttonGraf_ATY_Click;
+            // 
+            // textBoxResultMasters_ATY
+            // 
+            textBoxResultMasters_ATY.BackColor = SystemColors.ActiveCaption;
+            textBoxResultMasters_ATY.Location = new Point(384, 248);
+            textBoxResultMasters_ATY.Multiline = true;
+            textBoxResultMasters_ATY.Name = "textBoxResultMasters_ATY";
+            textBoxResultMasters_ATY.Size = new Size(629, 309);
+            textBoxResultMasters_ATY.TabIndex = 11;
             // 
             // FormMainLoad_ATY
             // 
@@ -338,9 +350,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1405, 581);
+            Controls.Add(textBoxResultMasters_ATY);
+            Controls.Add(buttonGraf_ATY);
             Controls.Add(chartGraf_ATY);
             Controls.Add(labelInfoMasterskaya_ATY);
-            Controls.Add(dataGridViewResultMaster_ATY);
             Controls.Add(dataGridViewResultInfo_ATY);
             Controls.Add(groupBoxInfoMaster_ATY);
             Controls.Add(groupBoxDataEntry_ATY);
@@ -357,7 +370,6 @@
             groupBoxInfoMaster_ATY.ResumeLayout(false);
             groupBoxInfoMaster_ATY.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewResultInfo_ATY).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewResultMaster_ATY).EndInit();
             ((System.ComponentModel.ISupportInitialize)chartGraf_ATY).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -380,7 +392,6 @@
         private GroupBox groupBoxInfoMaster_ATY;
         private Button buttonSearch_ATY;
         private DataGridView dataGridViewResultInfo_ATY;
-        private DataGridView dataGridViewResultMaster_ATY;
         private Label labelInfoMasterskaya_ATY;
         private RadioButton radioButtonMaster7_ATY;
         private RadioButton radioButtonMaster6_ATY;
@@ -391,5 +402,7 @@
         private RadioButton radioButtonMaster1_ATY;
         private Button buttonCheckInfoMaster_ATY;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartGraf_ATY;
+        private Button buttonGraf_ATY;
+        private TextBox textBoxResultMasters_ATY;
     }
 }
