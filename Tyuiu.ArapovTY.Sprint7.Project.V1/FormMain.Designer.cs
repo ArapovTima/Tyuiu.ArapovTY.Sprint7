@@ -37,8 +37,6 @@
             labelName_ATY = new Label();
             buttonHelp_ATY = new Button();
             toolTipProject_ATY = new ToolTip(components);
-            buttonOpenFile_ATY = new Button();
-            buttonSaveFile_ATY = new Button();
             openFileDialogProject_ATY = new OpenFileDialog();
             saveFileDialogProject_ATY = new SaveFileDialog();
             groupBoxDataEntry_ATY = new GroupBox();
@@ -73,7 +71,7 @@
             panelName_ATY.Controls.Add(labelName_ATY);
             panelName_ATY.Location = new Point(5, 5);
             panelName_ATY.Name = "panelName_ATY";
-            panelName_ATY.Size = new Size(1071, 71);
+            panelName_ATY.Size = new Size(1274, 71);
             panelName_ATY.TabIndex = 0;
             // 
             // labelName_ATY
@@ -89,37 +87,16 @@
             // 
             // buttonHelp_ATY
             // 
+            buttonHelp_ATY.BackColor = SystemColors.Info;
             buttonHelp_ATY.Image = (Image)resources.GetObject("buttonHelp_ATY.Image");
-            buttonHelp_ATY.Location = new Point(1309, 5);
+            buttonHelp_ATY.Location = new Point(1285, 5);
             buttonHelp_ATY.Name = "buttonHelp_ATY";
-            buttonHelp_ATY.Size = new Size(84, 71);
+            buttonHelp_ATY.Size = new Size(108, 98);
             buttonHelp_ATY.TabIndex = 1;
             toolTipProject_ATY.SetToolTip(buttonHelp_ATY, "Показать информацию о разработчике");
-            buttonHelp_ATY.UseVisualStyleBackColor = true;
+            buttonHelp_ATY.UseVisualStyleBackColor = false;
             buttonHelp_ATY.Click += buttonHelp_ATY_Click;
             buttonHelp_ATY.MouseEnter += buttonHelp_ATY_MouseEnter;
-            // 
-            // buttonOpenFile_ATY
-            // 
-            buttonOpenFile_ATY.Image = (Image)resources.GetObject("buttonOpenFile_ATY.Image");
-            buttonOpenFile_ATY.Location = new Point(1107, 5);
-            buttonOpenFile_ATY.Name = "buttonOpenFile_ATY";
-            buttonOpenFile_ATY.Size = new Size(78, 71);
-            buttonOpenFile_ATY.TabIndex = 2;
-            toolTipProject_ATY.SetToolTip(buttonOpenFile_ATY, "Выберите нужный файл для загрузки");
-            buttonOpenFile_ATY.UseVisualStyleBackColor = true;
-            buttonOpenFile_ATY.MouseEnter += buttonOpenFile_ATY_MouseEnter;
-            // 
-            // buttonSaveFile_ATY
-            // 
-            buttonSaveFile_ATY.Image = (Image)resources.GetObject("buttonSaveFile_ATY.Image");
-            buttonSaveFile_ATY.Location = new Point(1212, 5);
-            buttonSaveFile_ATY.Name = "buttonSaveFile_ATY";
-            buttonSaveFile_ATY.Size = new Size(79, 71);
-            buttonSaveFile_ATY.TabIndex = 3;
-            toolTipProject_ATY.SetToolTip(buttonSaveFile_ATY, "Сохранить обработанные данные в файл в формате CSV");
-            buttonSaveFile_ATY.UseVisualStyleBackColor = true;
-            buttonSaveFile_ATY.Click += buttonSaveFile_ATY_Click;
             // 
             // openFileDialogProject_ATY
             // 
@@ -140,18 +117,19 @@
             // 
             // buttonSearch_ATY
             // 
-            buttonSearch_ATY.BackColor = Color.LightGreen;
+            buttonSearch_ATY.BackColor = SystemColors.Info;
             buttonSearch_ATY.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            buttonSearch_ATY.Image = (Image)resources.GetObject("buttonSearch_ATY.Image");
             buttonSearch_ATY.Location = new Point(230, 23);
             buttonSearch_ATY.Name = "buttonSearch_ATY";
             buttonSearch_ATY.Size = new Size(120, 70);
             buttonSearch_ATY.TabIndex = 2;
-            buttonSearch_ATY.Text = "Поиск";
             buttonSearch_ATY.UseVisualStyleBackColor = false;
             buttonSearch_ATY.Click += buttonSearch_ATY_Click;
             // 
             // textBoxZakazID_ATY
             // 
+            textBoxZakazID_ATY.BackColor = SystemColors.Info;
             textBoxZakazID_ATY.Location = new Point(7, 58);
             textBoxZakazID_ATY.Name = "textBoxZakazID_ATY";
             textBoxZakazID_ATY.Size = new Size(205, 27);
@@ -357,8 +335,6 @@
             Controls.Add(dataGridViewResultInfo_ATY);
             Controls.Add(groupBoxInfoMaster_ATY);
             Controls.Add(groupBoxDataEntry_ATY);
-            Controls.Add(buttonSaveFile_ATY);
-            Controls.Add(buttonOpenFile_ATY);
             Controls.Add(buttonHelp_ATY);
             Controls.Add(panelName_ATY);
             Name = "FormMainLoad_ATY";
@@ -383,8 +359,6 @@
         private ToolTip toolTipProject_ATY;
         private OpenFileDialog openFileDialogProject_ATY;
         private SaveFileDialog saveFileDialogProject_ATY;
-        private Button buttonOpenFile_ATY;
-        private Button buttonSaveFile_ATY;
         private GroupBox groupBoxDataEntry_ATY;
         private TextBox textBoxZakazID_ATY;
         private Label labelZakazID_ATY;

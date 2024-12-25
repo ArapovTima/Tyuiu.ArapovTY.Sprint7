@@ -121,7 +121,7 @@
   <data name="pictureBoxMe_ATY.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAR8AAAGXCAYAAACKtFT4AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAA/7JJREFUeF6MvQdcFFf/xmuStyRveuyKgtJ77713WJbee+9VQAQriF3sAoKAohQF
+        vAAADrwBlbxySQAA/7JJREFUeF6MvQdcFFf/xmuStyRveuyKgtJ77713WJbee+9VQAQriF3sAoKAohQF
         C4qKir333o01vffy3OcMmuQt/3uv+fwys7uzs8vuzPd8n3NmZoc9fXADj+5ewP1bJ3D3+hHcvTaIezeO
         4sn98/jhh+f4/fcfAPyG3/n/33//Hb//9iN+/uk5Ht46gutnBvDg8lE8unMO3339ifT4f//7BT99+xif
         P7iAzx5ewI/ffcS1/cj6WVqrtF7x3+8/8/W+wCfPPsTzR/fw0Yd38NGju/jkk8f4la8p3sNf//3++6/4
@@ -5016,11 +5016,13 @@
     <value>Предметная область: Авторемонтные мастерские
 
 В программе реализовано: 
-
+ввод, открытие через файл, 
+вывод посещаемости мастерской через график, 
+отдельное окно сведения о разработчике
 
 
 Разработчик: Арапов Тимофей Яковлевич
-Группа: АСОиУБ-24-1
+Группа: АСОиУб-24-1
 
 
 Тюменский индустриальный университет (c) 2024

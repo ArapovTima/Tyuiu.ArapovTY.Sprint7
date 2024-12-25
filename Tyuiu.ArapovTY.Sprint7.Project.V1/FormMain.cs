@@ -18,7 +18,7 @@ namespace Tyuiu.ArapovTY.Sprint7.Project.V1
         static int rows;
         static int columns;
         static string openFilepath;
-        string path = $@"C:\Sprint7\јйди.csv";
+        string path = $@"C:\Users\user\source\repos\Tyuiu.ArapovTY.Sprint7\Tyuiu.ArapovTY.Sprint7.Project.V1\јйди.csv";
         static int cost;
         static int date;
         private void buttonHelp_ATY_Click(object sender, EventArgs e)

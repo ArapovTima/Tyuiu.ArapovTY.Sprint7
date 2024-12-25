@@ -98,7 +98,7 @@
             labelInfo_ATY.Font = new Font("Times New Roman", 10.8F, FontStyle.Italic, GraphicsUnit.Point, 204);
             labelInfo_ATY.Location = new Point(6, 36);
             labelInfo_ATY.Name = "labelInfo_ATY";
-            labelInfo_ATY.Size = new Size(411, 240);
+            labelInfo_ATY.Size = new Size(411, 280);
             labelInfo_ATY.TabIndex = 0;
             labelInfo_ATY.Text = resources.GetString("labelInfo_ATY.Text");
             // 
