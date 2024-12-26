@@ -51,7 +51,7 @@ namespace Tyuiu.ArapovTY.Sprint7.Project.V1
                 dataGridViewResultInfo_ATY.Rows.Clear();
                 string[,] res = Array(path);
                 dataGridViewResultInfo_ATY.ColumnCount = columns;
-                dataGridViewResultInfo_ATY.RowCount = ID+1;
+                dataGridViewResultInfo_ATY.RowCount = ID + 1;
                 if (ID < rows)
                 {
                     for (int i = 0; i < rows; i++)
@@ -119,13 +119,22 @@ namespace Tyuiu.ArapovTY.Sprint7.Project.V1
 
         private void buttonGraf_ATY_Click(object sender, EventArgs e)
         {
-            this.chartGraf_ATY.Series["Люди"].Points.AddXY("Пн", 10);
-            this.chartGraf_ATY.Series["Люди"].Points.AddXY("Вт", 15);
-            this.chartGraf_ATY.Series["Люди"].Points.AddXY("Ср", 8);
-            this.chartGraf_ATY.Series["Люди"].Points.AddXY("Чт", 9);
-            this.chartGraf_ATY.Series["Люди"].Points.AddXY("Пт", 19);
-            this.chartGraf_ATY.Series["Люди"].Points.AddXY("Сб", 20);
-            this.chartGraf_ATY.Series["Люди"].Points.AddXY("Вс", 30);
+            if (chartGraf_ATY.Series.IndexOf("Люди") == -1)
+            {
+                var series = new System.Windows.Forms.DataVisualization.Charting.Series("Люди");
+                series.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
+                chartGraf_ATY.Series.Add(series);
+            }
+            chartGraf_ATY.Series["Люди"].Points.Clear();
+            chartGraf_ATY.Series["Люди"].Points.AddXY("Пн", 10);
+            chartGraf_ATY.Series["Люди"].Points.AddXY("Вт", 15);
+            chartGraf_ATY.Series["Люди"].Points.AddXY("Ср", 8);
+            chartGraf_ATY.Series["Люди"].Points.AddXY("Чт", 9);
+            chartGraf_ATY.Series["Люди"].Points.AddXY("Пт", 19);
+            chartGraf_ATY.Series["Люди"].Points.AddXY("Сб", 20);
+            chartGraf_ATY.Series["Люди"].Points.AddXY("Вс", 30);
+            chartGraf_ATY.ChartAreas[0].AxisX.Title = "Дни недели";
+            chartGraf_ATY.ChartAreas[0].AxisY.Title = "Количество";
         }
 
         private void buttonCheckInfoMaster_ATY_Click(object sender, EventArgs e)
